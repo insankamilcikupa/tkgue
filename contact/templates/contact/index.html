@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome | Belajar Asik</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static app_css %}"> 
+</head>
+<body>
+    <img id = "banner" src="{% static banner %}" alt="">
+    <nav>
+        <ul>
+            {% for link, name in nav%}
+                <li>
+                    <a href="{{link}}" title="">{{name}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <h1>Welcome to Contactnya BelajarAsik</h1>
+    <div class="container">
+        {% for tampil in datanya %}
+            <h3>{{tampil.nama}}</h3>
+            <p>{{tampil.no_telp}}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

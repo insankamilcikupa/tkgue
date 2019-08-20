@@ -1,0 +1,17 @@
+h1{
+    color: #f60;
+}
+
+h2{
+    color: blueviolet;
+    font-family: arial;
+}
+
+h3{
+    color: brown;
+    font-family: arial;
+}
+
+#banner {
+    width:100%;
+}

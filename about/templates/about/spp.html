@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{judul}}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static app_css %}"> 
+</head>
+<body>
+    <img style="width:100%" src="{% static "about/img/banner_about.png"%}" alt="">
+    <nav>
+            <ul>
+                {% for link, name in nav%}
+                    <li>
+                        <a href="{{link}}" title="">{{name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <h3>Selamat Datang, {{user}}</h3>
+        <li><a href="/about/semua/">Kembali</a></li>
+        <ul>
+            <li>
+                <a href="/about/data">Data Siswa</a>
+            </li>
+            <li>
+                <a href="/about/nilai">Nilai Siswa</a>
+            </li>
+            <li>
+                <a href="/about/spp">SPP Siswa</a>
+            </li>
+        </ul>
+
+        <div class="container">
+            <h4>SPP Anda</h4>
+            <h5>Nama Anda {{user}}</h5>
+                {% for data in tampil_spp %}
+                    <h5>Bulan: {{data.bulan}}</h5>
+                    <h5>Status: {{data.status}}</h5>
+                {% endfor %}
+        </div>
+</body>
+</html>

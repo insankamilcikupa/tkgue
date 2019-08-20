@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<<<<<<< HEAD
+    <title>{{judul}}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static app_css %}"> 
+</head>
+<body>
+    <img style="width:100%" src="{% static "img/banner_home.png"%}" alt="">
+    <nav>
+            <ul>
+                {% for link, name in nav%}
+                    <li>
+                        <a href="{{link}}" title="">{{name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <h1>Welcome to BelajarAsik</h1>
+=======
+    <title>Belajar Asik</title>
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/bootstrap/bootstrap.css" %}">
+
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">SP Gaya Belajar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+              
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m1-auto">
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Selamat Datang</h1>
+        <h3>di Sistem Pakar Modulitas Gaya Belajar</h3>
+        <p>Ini adalah Home Page</p>
+    </div>
+    <script src="{% static "vendor/jquery/jquery.js" %}" type="text/javascript"></script>
+    <script src="{% static "vendor/popper/popper.js" %}" type="text/javascript"></script>
+    <script src="{% static "vendor/bootstrap/bootstrap.js" %}" type="text/javascript">
+    </script>
+>>>>>>> e4fde7a23091e0a97d3e7d7620670ae49aae8cf7
+</body>
+</html>
